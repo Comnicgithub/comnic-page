@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  font-family: 'Raleway', sans-serif;
+}
+
+.logo {
+  width: 200px;
+}
+
+body {
+  background: #000000;
+  color: #fff;
+}
+
+::selection {
+  background-color: rgba(74, 47, 189, 0.5);
+}
+
+#cover {
+  background: linear-gradient(
+    150.00deg,
+    rgb(0, 0, 0) -5.91%,
+    rgb(68, 68, 68) 111.58%
+  );
+  display: flex;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.currentIconPage svg {
+  stroke: #F5AE0A;
+  fill: #F5AE0A;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  background-color: #f5ae0a;
+}
