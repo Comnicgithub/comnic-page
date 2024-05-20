@@ -16,9 +16,14 @@ body {
 }
 
 ::selection {
-  background-color: rgba(74, 47, 189, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
+.navigator-prev{
+  color: #F5AE0A;
+}
+
+ 
 #cover {
   background: linear-gradient(
     150.00deg,
@@ -39,7 +44,8 @@ body {
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets
   .swiper-pagination-bullet {
-  background-color: #f5ae0a;
+  background-color: #ffb300;
 }
+
 
 

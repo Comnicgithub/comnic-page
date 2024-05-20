@@ -24,16 +24,15 @@ export function Contacto() {
                 className="absolute w-full h-full translate-z-0"
                 id="tsparticles" init={particlesInit} loaded={particlesLoaded}
                 options={optionsParticles} />
-
+                        <AvatarWorks />
             <motion.div
                 initial={motionTransitionsAbout.initial}
                 animate={motionTransitionsAbout.animate}
                 transition={motionTransitionsAbout.transition}
             >
                 <h1 className="mb-6 md:text-4xl">Podes contactarnos <br /> <span className="text-secondary">Via mail o Whatsapp</span></h1>
-                <p>Mail: info@comnic.com.ar | WP: +54 9 11 3653 4885 </p>
+                <p>Mail: info@comnic.com.ar</p>
             </motion.div>
-            <AvatarWorks />
         </div>
     )
 }

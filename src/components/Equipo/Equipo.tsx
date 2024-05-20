@@ -18,14 +18,15 @@ export function Equipo() {
 
     const particlesLoaded = useCallback(async () => { }, [])
     return (
-        <div className='h-screen'>
-            <Particles
+        <div className='h-screen translate-y-20'>
+            <AvatarWorks />
+                        <Particles
                 className="absolute w-full h-full translate-z-0"
                 id="tsparticles" init={particlesInit} loaded={particlesLoaded}
-                options={optionsParticles}/>
-            <AvatarWorks />
+                options={optionsParticles} />
+            
             <Circle />
-            <div className="flex flex-col justify-center min-h-screen">
+            <div className="flex flex-col justify-center min-h-screen translate-y-20">
                 <motion.h1
                     variants={fadeIn('up', 0.5)}
                     initial="hidden"
@@ -33,7 +34,7 @@ export function Equipo() {
                     exit="hidden"
                     className="my-5 text-4xl text-center md:my-10"
                 >
-                    Nuestro Equipo <br /><span className="text-secondary">De profesionales.</span>
+                    Socios creadores <br /><span className="text-secondary">de la agencia.</span>
                 </motion.h1>
                 <motion.div
                     variants={fadeIn('up', 0.5)}

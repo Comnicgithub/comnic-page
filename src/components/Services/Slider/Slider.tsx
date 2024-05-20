@@ -29,7 +29,7 @@ export function Slider() {
                 clickable: true
             }}
             modules={[Pagination]}
-            className="h-[240px] md:h-[340px] w-[270px] md:w-[550px]">
+            className="h-[240px] md:h-[340px] w-[300px] md:w-[700px]">
             {serviceData.map((item, index) => (
                 <SwiperSlide key={index}>
                     <div className="flex px-6 py-8 h-[200px]  md:h-auto rounded-lg cursor-pointer bg-[rgba(65,47,123,0.15)] sm:flex-col gap-x-6 sm:gap-x-0 group hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300 ">

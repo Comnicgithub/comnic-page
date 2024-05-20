@@ -11,6 +11,7 @@ import Particles from "react-tsparticles"
 import { loadFull } from "tsparticles"
 import type { Engine } from 'tsparticles-engine'
 import { optionsParticles } from "../../utils/particleOptions"
+import { AvatarWorks } from "../AvatarWorks/AvatarWorks";
 
 export function About() {
     const [index, setIndex] = useState(0)
@@ -22,62 +23,24 @@ export function About() {
 
     return (
         <div className="items-center min-h-screen px-6 mx-auto align-middle mt-36 md:mt-0 md:flex md:max-w-4xl pb-36 md:pb-0">
-            <Particles
-                className="absolute w-full h-full translate-z-0"
+           <Avatar />
+                        <Particles
+                className="absolute w-full h-full translate-z-0 "
                 id="tsparticles" init={particlesInit} loaded={particlesLoaded}
                 options={optionsParticles} />
-            <Avatar />
-
-            <motion.div
-                initial={motionTransitionsAbout.initial}
-                animate={motionTransitionsAbout.animate}
-                transition={motionTransitionsAbout.transition}
-            >
-                <h1 className="mb-6 md:text-4xl">Creando webs con <br /> <span className="text-secondary">diseños espectaculares</span></h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vulputate enim urna, nec fringilla mauris mattis a. In mollis vitae velit ac vehicula. </p>
-
-                <div className="grid justify-between grid-cols-2 gap-3 my-8 md:flex md:grid-cols-4 md:gap-6">
-                    {dataCounter.map(({ id, endCounter, text, lineRight, lineRightMobile }) => (
-                        <div key={id} className={`${lineRight && 'ltr'}`}>
-                            <div className={`${lineRight && 'px-4 border-2 border-transparent md:border-e-gray-100'} ${lineRightMobile && 'border-e-gray-100'}`}>
-                                <p className="flex mb-2 text-2xl font-extrabold md:text-4xl text-secondary">
-                                    + <CountUp end={endCounter} start={0} duration={5} />
-                                </p>
-                                <p className="text-xs uppercase max-w-[100px]">
-                                    {text}
-                                </p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-
-                <div className="flex flex-col mt-10 mb-3 md:flex-row justify-evenly md:mt-28 md:mb-5">
-                    {dataAboutSkills.map((dataText, itemIndex) => {
-                        const { id, text } = dataText;
-
-                        return (
-                            <div key={id}
-                                className={`${index === id ? 'text-secondary duration-300 transition-all border-secondary' : 'border-white'} 
-                                        cursor-pointer md:text-lg relative px-2 md:px-8 py-4 border-2 rounded-xl flex justify-between items-center my-3`}
-                                onClick={() => setIndex(itemIndex)}
-                            >
-                                <p className="mr-4 text-md md:text-lg">{text}</p>
-                                {index === id ? (
-                                    <BiDownArrow />
-                                ) : (
-                                    <BiLeftArrow />
-                                )}
-                            </div>
-                        )
-                    })}
-                </div>
-                <div className="max-w-4xl p-4 mx-auto bg-secondary/20 rounded-xl">
-                    {dataAboutSkills[index].skills.map((items, index) => (
-                        <div key={index} className="flex justify-center max-w-md gap-4 mx-auto">
-                            <span>{items.title} {" "} </span> - <span>{items.date}</span>
-                        </div>
-                    ))}
-                </div>
+                
+            <motion.div className="translate-y-5">
+            <h1 className="mb-5 text-4xl leading-tight md:mb-10">SOMOS COMNIC <br />
+            <span  className="text-secondary">Queremos potenciarte</span></h1>
+            <p className="max-w-sm mb-10 leading-7 text-base md:max-w-2xl md:mx-0 md:mb-8 md:text-base md:leading-7">
+            Somos una agencia que ofrece servicios integrales en marketing digital, desarrollo empresarial y business intelligence con un
+            equipo de trabajo comprometido en cada proyecto, para ser tu socio estratégico en el logro de objetivos de tu negocio.
+            </p>
+            <span  className="text-secondary text-2xl">Objetivo</span> <br /><br />
+            <p className="max-w-sm mb-10  leading-7 text-base md:max-w-2xl md:mx-0 md:mb-8 md:text-base md:leading-7">
+            Colaborar con nuestros clientes para desarrollar e implementar estrategias comerciales efectivas que les permitan alcanzar sus objetivos empresariales.
+            Nos esforzamos por ser un socio estratégico confiable que brinda soluciones y resultados tangibles, mejorando la competitividad y la rentabilidad de nuestros clientes en el mercado.
+            </p>
             </motion.div>
         </div>
     )

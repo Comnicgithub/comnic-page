@@ -29,33 +29,33 @@ import { RiHome4Line, RiAccountPinCircleLine, RiServerLine, RiBriefcase2Line, Ri
 // ];
 export const dataNavbar = [
   {
-    name: "home",
+    name: "Home",
     path: "/",
     icon: <RiHome4Line size="30" />,
   },
   {
-    name: "about",
-    path: "/#",
+    name: "¿Por que elegirnos?",
+    path: "/about",
     icon: <RiAccountPinCircleLine size="30" />,
   },
   {
-    name: "services",
-    path: "/#",
+    name: "Servicios",
+    path: "/services",
     icon: <RiServerLine size="30" />,
   },
   {
-    name: "work",
-    path: "/#",
+    name: "Clientes",
+    path: "/works",
     icon: <RiBriefcase2Line size="30" />,
   },
   {
-    name: "Equipo",
+    name: "Fundadores",
     path: "/Equipo",
     icon: <RiChatPollLine size="30" />,
   },
-  {
-    name: "Contacto",
-    path: "/Contacto",
-    icon: <RiContactsBook2Line size="30" />,
-  },
+  // {
+  //   name: "Contacto",
+  //   path: "/Contacto",
+  //   icon: <RiContactsBook2Line size="30" />,
+  // },
 ];

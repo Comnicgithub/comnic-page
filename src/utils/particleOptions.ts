@@ -28,10 +28,10 @@ export const optionsParticles = {
     },
     links: {
       color: "#fff",
-      distance: 150,
+      distance: 50,
       enable: true,
-      opacity: 0.5,
-      width: 1,
+      opacity: 0.2,
+      width: 2,
     },
     collisions: {
       enable: true,
@@ -51,7 +51,7 @@ export const optionsParticles = {
       value: 80,
     },
     opacity: {
-      value: 0.5,
+      value: 0.3, // Ajusta este valor para cambiar la opacidad
     },
     shape: {
       type: "circle",
@@ -62,3 +62,4 @@ export const optionsParticles = {
   },
   detectRetina: true,
 };
+

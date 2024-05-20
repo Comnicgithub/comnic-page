@@ -26,22 +26,22 @@ export function Services() {
             <Circle />
             <AvatarWorks />
 
-            <div className="flex flex-col md:flex-row gap-x-5">
-                <div className="flex flex-col text-center md:text-left md:w-[30vw] mb-10">
+            <div className="flex flex-col md:flex-row gap-x-5 translate-y-10">
+                <div className="flex flex-col text-center md:text-left w-[80vw] md:w-[30vw] mb-10">
                     <motion.h1 className="mb-4 text-3xl"
                         variants={fadeIn('up', 0.5)}
                         initial="hidden"
                         animate="show"
                         exit="hidden"
                     >
-                        Mis <span className="text-secondary">servicios.</span>
+                        Nuestros <span className="text-secondary">servicios</span>
                     </motion.h1>
                     <motion.p
                         variants={fadeIn('up', 0.5)}
                         initial="hidden"
                         animate="show"
                         exit="hidden"
-                        className="max-w-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vulputate enim urna, nec fringilla mauris mattis a. In mollis vitae velit ac vehicula.
+                        className="w-[80vw] md:w-[30vw]">Vivimos y respiramos marketing digital. Es por eso que te mostraremos exactamente cómo elaboramos nuestros planes y soluciones.
                     </motion.p>
                 </div>
 

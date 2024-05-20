@@ -19,7 +19,7 @@ export function Cover() {
                 className="absolute w-full h-full translate-z-0"
                 id="tsparticles" init={particlesInit} loaded={particlesLoaded}
                 options={optionsParticles} />
-            <Introduction />
+            <Introduction  />
         </div>
     )
 }

@@ -14,18 +14,20 @@ import { optionsParticles } from "../../utils/particleOptions"
 export function Work() {
     const [expandedIndex, setExpandedIndex] = useState<number | null>(null)
 
-    const handleClick = (index: number) => {
+    const handleRollover = (index: number) => {
         setExpandedIndex(index === expandedIndex ? -1 : index)
     }
 
     const cardVariants = {
         expanded: {
-            width: "360px",
-            opacity: 1
+            width: "200px",
+            opacity: 1,
+            translateY: "-10px"
         },
         collapsed: {
             width: "200px",
-            opacity: 0.2
+            opacity: 0.7,
+            translateY: "0px"
         }
     }
     const particlesInit = useCallback(async (engine: Engine) => {
@@ -35,7 +37,7 @@ export function Work() {
     const particlesLoaded = useCallback(async () => { }, [])
 
     return (
-        <div className="h-screen">
+        <div className="h-screen translate-y-20">
             <Particles
                 className="absolute w-full h-full translate-z-0"
                 id="tsparticles" init={particlesInit} loaded={particlesLoaded}
@@ -43,14 +45,18 @@ export function Work() {
             <AvatarWorks />
             <Circle />
             <div className="grid pb-32 md:min-h-screen mt-28 md:mt-0 place-items-center ">
-                <div>
+                <div className="flex flex-wrap justify-center w-3/5 mx-auto">
                     <motion.h1
                         variants={fadeIn('left', 0.5)}
                         initial="hidden"
                         animate="show"
                         exit="hidden"
-                        className="my-5 text-2xl text-center md:text-4-xl"
-                    >Mis últimos  <span className="text-secondary">trabajos realizados.</span>
+                        className="my-5 text-2xl md:text-4-xl"
+                    >CLIENTES
+                    <p className="max-w-sm mb-10  leading-7 text-base md:max-w-2xl md:mx-0 md:mb-8 md:text-base md:leading-7 ">
+                    <span className="text-secondary"> Ellos y más clientes nos eligen</span> <br />
+                    Trabajamos con marcas de diferentes rubros, haciendo foco en los objetivos particulares de cada una de ellas.
+                    </p>
                     </motion.h1>
                     <motion.div
                         className="flex flex-col items-center h-full gap-5 px-2 md:flex-row"
@@ -59,9 +65,10 @@ export function Work() {
                         animate="show"
                         exit="hidden"
                     >
-                        {cardContent.map(({ id, title, imageUrl, description, skills }) => (
+                        <div className="flex flex-wrap justify-center w-5/5 mx-auto">
+                        {cardContent.map(({ id, imageUrl }) => (
                             <motion.div key={id}
-                                className={`card cursor-pointer h-[400px] bg-auto bg-no-repeat bg-center rounded-[20px] ${id === expandedIndex && 'expanded'}`}
+                                className={`card cursor-pointer m-5 h-[150px] bg-auto bg-no-repeat bg-center bg-contain rounded-[20px] ${id === expandedIndex && 'expanded'}`}
                                 initial={{ opacity: 1 }}
                                 variants={cardVariants}
                                 animate={id === expandedIndex ? 'expanded' : 'collapsed'}
@@ -69,28 +76,20 @@ export function Work() {
                                     opacity: 1
                                 }}
                                 transition={{ duration: 0.5 }}
-                                onClick={() => handleClick(id)}
+                                // onClick={() => handleClick(id)}
+                                onMouseOver={() => handleRollover(id)}
+
                                 style={{
                                     backgroundImage: `url(/assets/${imageUrl})`
                                 }}
                             >
                                 <div className="flex flex-col justify-end h-full">
-                                    <div className="card-footer rounded-b-[20px] bg-gray-800 bg-opacity-75 min-h-[100px] flex flex-col items-center justify-center p-3">
-                                        <h2 className="text-xl font-semibold text-center text-white">{title}</h2>
-                                        {id === expandedIndex && (
-                                            <>
-                                                <p>{description}</p>
-                                                <div className="flex gap-5 mt-3">
-                                                    {skills.map((data, index) => (
-                                                        <p key={index}>{data.icon}</p>
-                                                    ))}
-                                                </div>
-                                            </>
-                                        )}
-                                    </div>
+                                    
                                 </div>
                             </motion.div>
                         ))}
+                        </div>
+                       
                     </motion.div>
                 </div>
             </div>

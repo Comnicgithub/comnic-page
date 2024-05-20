@@ -1,36 +1,49 @@
 
 import {
-    RxCrop,
-    RxDesktop,
+    RxTokens,
+    RxTransform,
+    RxBarChart,
+    RxComponent1,
+    RxGear,
     RxPencil2,
-    RxReader,
-    RxRocket,
+    RxCode,
+
 } from 'react-icons/rx'
 
 export const serviceData = [
     {
-        icon: <RxCrop />,
-        title: "Branding",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        icon: <RxTokens />,
+        title: "GESTIÓN DE REDES SOCIALES",
+        description: "Planificación y diseño de estrategias de contenidos en redes sociales.",
+    },
+    {
+        icon: <RxTransform />,
+        title: "DESARROLLO WEB",
+        description: "Construcción y mantenimiento de sitios web efectivos y funcionales.",
+    },
+    {
+        icon: <RxBarChart />,
+        title: "PAUTA DIGITAL | SEO Y SEM",
+        description: "Configuración de campañas en Meta y Google Ads.",
+    },
+    {
+        icon: <RxComponent1 />,
+        title: "DESARROLLO EMPRESARIAL",
+        description: "Evaluación, planificación y ejecución de estrategias para el desarrollo sostenible del negocio.",
+    },
+    {
+        icon: <RxGear />,
+        title: "BUSINESS INTELLIGENCE",
+        description: "Análisis de datos para la toma de decisiones estratégicas.",
     },
     {
         icon: <RxPencil2 />,
-        title: "Design",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        title: "EMAIL MARKETING",
+        description: "Planificación y ejecución de campañas de envíos masivos de emails.",
     },
     {
-        icon: <RxDesktop />,
-        title: "Development",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    },
-    {
-        icon: <RxReader />,
-        title: "Copywriting",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    },
-    {
-        icon: <RxRocket />,
-        title: "SEO",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        icon: <RxCode />,
+        title: "DESARROLLO DE APPS",
+        description: "Planificación, creación, diseño y optimización de aplicaciones web y mobile",
     },
 ];

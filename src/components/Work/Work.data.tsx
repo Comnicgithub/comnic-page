@@ -1,94 +1,66 @@
-import { SiTailwindcss, SiGithub, SiReact, SiNextdotjs, SiTestinglibrary } from "react-icons/si";
-
 export const cardContent = [
   {
     id: 0,
     title: "Calculator",
     description:
       "Calculator project made by React and Tailwind CSS. ",
-    imageUrl: "/work-1.jpeg",
-    skills: [
-      {
-        icon: <SiReact size="40" />
-      },
-      {
-        icon: <SiTailwindcss size="40" />
-      },
-      {
-        icon: <SiTestinglibrary size="40" />
-      },
-    ]
+      imageUrl: "/C1.png",
+   
   },
   {
     id: 1,
     title: "Portfolio React",
     description:
       "This is a description2, sjdnfsdf idfs sdhfbsdf jds fjsd gf sjdgns",
-    imageUrl: "/work-2.jpeg",
-    skills: [
-      {
-        icon: <SiNextdotjs size="40" />
-      },
-      {
-        icon: <SiTailwindcss size="40" />
-      },
-      {
-        icon: <SiGithub size="40" />
-      },
-    ]
+      imageUrl: "/C2.png",
+    
   },
   {
     id: 2,
     title: "Strapi",
     description:
       "This is a description, sjdnfsdf idfs sdhfbsdf jds fjsd gf sjdgns",
-    imageUrl: "/work-3.jpeg",
-    skills: [
-      {
-        icon: <SiNextdotjs size="40" />
-      },
-      {
-        icon: <SiTailwindcss size="40" />
-      },
-      {
-        icon: <SiGithub size="40" />
-      },
-    ]
+      imageUrl: "/C3.png",
+    
   },
   {
     id: 3,
     title: "Prestashop",
     description:
       "This is a description, sjdnfsdf idfs sdhfbsdf jds fjsd gf sjdgns",
-    imageUrl: "/work-4.jpeg",
-    skills: [
-      {
-        icon: <SiNextdotjs size="40" />
-      },
-      {
-        icon: <SiTailwindcss size="40" />
-      },
-      {
-        icon: <SiGithub size="40" />
-      },
-    ]
+      imageUrl: "/C4.png",
+  
   },
   {
     id: 4,
     title: "E-Commerce React",
     description:
       "This is a description, sjdnfsdf idfs sdhfbsdf jds fjsd gf sjdgns",
-    imageUrl: "/work-5.jpeg",
-    skills: [
-      {
-        icon: <SiNextdotjs size="40" />
-      },
-      {
-        icon: <SiTailwindcss size="40" />
-      },
-      {
-        icon: <SiGithub size="40" />
-      },
-    ]
+      imageUrl: "/C5.png",
+    
+  },
+  {
+    id: 5,
+    title: "E-Commerce React",
+    description:
+      "This is a description, sjdnfsdf idfs sdhfbsdf jds fjsd gf sjdgns",
+      imageUrl: "/C6.png",
+    
+  },
+  {
+    id: 6,
+    title: "E-Commerce React",
+    description:
+      "This is a description, sjdnfsdf idfs sdhfbsdf jds fjsd gf sjdgns",
+      imageUrl: "/C7.png",
+    
+  },
+  {
+    id: 7,
+    title: "E-Commerce React",
+    description:
+      "This is a description, sjdnfsdf idfs sdhfbsdf jds fjsd gf sjdgns",
+      imageUrl: "/C8.png",
+    
   },
 ];
